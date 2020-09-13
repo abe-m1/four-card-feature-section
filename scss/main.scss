@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
+//color variables
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+$veryDarkBlue: hsl(234, 12%, 34%);
+$grayishBlue: hsl(229, 6%, 66%);
+$veryLightGray: hsl(0, 0%, 98%);
+
 html {
   font-size: 62.5%;
 }
@@ -11,6 +21,16 @@ body {
   color: hsl(214, 17%, 51%);
   box-sizing: border-box;
   height: 100vh;
+}
+
+.background {
+  background-color: $veryLightGray;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
 }
 
 .attribution {

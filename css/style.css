@@ -10,6 +10,15 @@ body {
   box-sizing: border-box;
   height: 100vh; }
 
+.background {
+  background-color: #fafafa;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0; }
+
 .attribution {
   font-size: 11px;
   text-align: center; }
