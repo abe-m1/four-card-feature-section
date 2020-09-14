@@ -109,3 +109,9 @@ body {
 
 .border-red {
   border-top: 3px solid #ea5353; }
+
+@media only screen and (max-width: 768px) {
+  .columns {
+    display: block; }
+  .attribution {
+    display: none; } }

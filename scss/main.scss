@@ -13,6 +13,7 @@ $veryLightGray: hsl(0, 0%, 98%);
 @mixin border-color($color) {
   border-top: 3px solid $color;
 }
+
 html {
   font-size: 62.5%;
 }
@@ -146,4 +147,14 @@ body {
 
 .border-red {
   @include border-color($red);
+}
+
+@media only screen and (max-width: 768px) {
+  .columns {
+    display: block;
+  }
+
+  .attribution {
+    display: none;
+  }
 }
