@@ -32,57 +32,45 @@ body {
   height: 100vh;
 }
 
-.background {
+.container {
   background-color: $veryLightGray;
-  background-size: contain;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   height: 100%;
   margin: 0;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 .columns {
   display: flex;
-  // height: 100%;
   width: 80%;
   margin: auto;
   height: 75vh;
-}
-.one {
-  flex: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.two {
-  flex: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  &__left {
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.three {
-  flex: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  &__center {
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__right {
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .card {
   background-color: white;
   width: 80%;
   margin: auto;
-  height: 25vh;
+  height: 21vh;
   border-top: 3px solid $blue;
   border-radius: 6px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
@@ -92,61 +80,69 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 2.4rem;
+
+  &__sub {
+    margin-bottom: auto;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: $grayishBlue;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  &__image {
+    height: 50px;
+    width: 50px;
+    align-self: flex-end;
+  }
+
+  &--border-blue {
+    @include border-color($blue);
+  }
+
+  &--border-yellow {
+    @include border-color($orange);
+  }
+
+  &--border-green {
+    @include border-color($cyan);
+  }
+
+  &--border-red {
+    @include border-color($red);
+  }
 }
 
-.text-box {
+.text-container {
   text-align: center;
   padding-top: 3.5rem;
+
+  &__title {
+    font-size: 2.2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__sub-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+  }
+
+  &__content {
+    font-size: 1.4rem;
+  }
 }
 
-.title {
-  font-size: 2.2rem;
-  margin-bottom: 1.6rem;
+.attribution {
+  font-size: 11px;
+  text-align: center;
 }
-
-.sub-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1.6rem;
-}
-
-.content {
-  font-size: 1.4rem;
-}
-
-.image {
-  height: 50px;
-  width: 50px;
-  align-self: flex-end;
-}
-
-.card-sub {
-  margin-bottom: auto;
-  font-size: 1.3rem;
-  line-height: 1.6;
-  color: $grayishBlue;
-}
-
-.card-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-}
-
-.border-blue {
-  @include border-color($blue);
-}
-
-.border-yellow {
-  @include border-color($orange);
-}
-
-.border-green {
-  @include border-color($cyan);
-}
-
-.border-red {
-  @include border-color($red);
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media only screen and (max-width: 768px) {
