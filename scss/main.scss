@@ -11,7 +11,7 @@ $grayishBlue: hsl(229, 6%, 66%);
 $veryLightGray: hsl(0, 0%, 98%);
 
 @mixin border-color($color) {
-  border-top: 3px solid $color;
+  border-top: 4px solid $color;
 }
 
 html {
@@ -29,48 +29,54 @@ body {
   font-family: 'Karla', sans-serif;
   color: hsl(214, 17%, 51%);
   box-sizing: border-box;
-  height: 100vh;
+  background-color: $veryLightGray;
 }
 
 .container {
-  background-color: $veryLightGray;
-  height: 100%;
-  margin: 0;
+  height: 100vh;
+  // height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .columns {
   display: flex;
   width: 80%;
   margin: auto;
-  height: 75vh;
+  // height: 75vh;
 
   &__left {
-    flex: 20%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   &__center {
-    flex: 20%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   &__right {
-    flex: 20%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }
 
 .card {
   background-color: white;
-  width: 80%;
+  width: 100%;
   margin: auto;
-  height: 21vh;
+  // height: 21vh;
+  width: 250px;
+  // height: 250px;
   border-top: 3px solid $blue;
   border-radius: 6px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
@@ -79,10 +85,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2.4rem;
+  padding: 2.9rem;
 
   &__sub {
-    margin-bottom: auto;
+    margin-bottom: 4rem;
     font-size: 1.3rem;
     line-height: 1.6;
     color: $grayishBlue;
@@ -90,8 +96,9 @@ body {
 
   &__title {
     font-size: 2.2rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 2rem;
+    color: $veryDarkBlue;
   }
 
   &__image {
@@ -119,21 +126,28 @@ body {
 
 .text-container {
   text-align: center;
-  padding-top: 3.5rem;
+  padding-top: 5.5rem;
+  color: $veryDarkBlue;
 
   &__title {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     margin-bottom: 1.6rem;
+    font-weight: 200;
   }
 
   &__sub-title {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     font-weight: 700;
     margin-bottom: 1.6rem;
   }
 
   &__content {
     font-size: 1.4rem;
+    color: $grayishBlue;
+
+    &:last-of-type {
+      margin-bottom: 2.9rem;
+    }
   }
 }
 
